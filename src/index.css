@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00236f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1e3a8a;
+  --color-on-primary-container: #90a8ff;
+  --color-primary-fixed: #dce1ff;
+  --color-primary-fixed-dim: #b6c4ff;
+  --color-on-primary-fixed: #00164e;
+  --color-on-primary-fixed-variant: #264191;
+
+  --color-secondary: #9d4300;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fd761a;
+  --color-on-secondary-container: #5c2400;
+  --color-secondary-fixed: #ffdbca;
+  --color-secondary-fixed-dim: #ffb690;
+  --color-on-secondary-fixed: #341100;
+  --color-on-secondary-fixed-variant: #783200;
+
+  --color-tertiary: #1b2b3f;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #314156;
+  --color-on-tertiary-container: #9dadc6;
+  --color-tertiary-fixed: #d3e4fe;
+  --color-tertiary-fixed-dim: #b7c8e1;
+  --color-on-tertiary-fixed: #0b1c30;
+  --color-on-tertiary-fixed-variant: #38485d;
+
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-variant: #e0e3e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #444651;
+  --color-inverse-surface: #2d3133;
+  --color-inverse-on-surface: #eff1f3;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-outline: #757682;
+  --color-outline-variant: #c5c5d3;
+  --color-background: #f7f9fb;
+  --color-on-background: #191c1e;
+
+  --font-body-md: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  --font-headline-lg-mobile: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  --font-title-md: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  --font-label-md: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  --font-caption: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  --font-display-lg: 'Be Vietnam Pro', 'Prompt', sans-serif;
+}
+
+@layer base {
+  html, body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', 'Prompt', sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: #f7f9fb;
+    color: #191c1e;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .px-margin-mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .px-gutter {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .pb-margin-mobile {
+    padding-bottom: 16px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Material symbols outlined filled helper */
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom keyframes for fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
